@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Hand Gesture Recognition</h2>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Start Gesture Recognition</button>
+</form>
+{% if message %}
+<p>{{ message }}</p>
+{% endif %}
+{% endblock %}
